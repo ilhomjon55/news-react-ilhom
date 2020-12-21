@@ -1,10 +1,10 @@
-import News from '../../Components/News/News.js';
+// import News from '../../Components/News/News.js';
 
-function Business() {
-	return (
-		<>
-			<News type='business' />
-		</>
-	);
-}
-export default Business;
+// function Business() {
+// 	return (
+// 		<>
+// 			<News type='business' />
+// 		</>
+// 	);
+// }
+// export default Business;

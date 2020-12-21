@@ -14,12 +14,12 @@ function Header() {
 					<li className='nav-item mx-2 btn '>
 						<NavLink to='/'>Home</NavLink>
 					</li>
-					<li className='nav-item mx-2 btn '>
+					{/* <li className='nav-item mx-2 btn '>
 						<NavLink to='/science'>Science</NavLink>
 					</li>
 					<li className='nav-item mx-2 btn '>
 						<NavLink to='/business'>Business</NavLink>
-					</li>
+					</li> */}
 				</ul>
 			</nav>
 		</header>
