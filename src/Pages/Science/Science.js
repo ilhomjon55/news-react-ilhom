@@ -1,10 +1,13 @@
-// import News from '../../Components/News/News.js';
+import News from '../../Components/News/News.js';
+import { useParams } from 'react-router-dom';
 
-// function Science() {
-// 	return (
-// 		<>
-// 			<News type='science' />
-// 		</>
-// 	);
-// }
-// export default Science;
+function Science() {
+	const { newstype, pagenumber } = useParams();
+
+	return (
+		<>
+			<News type={newstype} page={pagenumber} />
+		</>
+	);
+}
+export default Science;

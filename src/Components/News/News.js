@@ -1,13 +1,29 @@
+import { Redirect, useLocation } from 'react-router-dom';
 import { data } from '../../Data/data.js';
 
 function News({ type, page }) {
+	const location = useLocation();
+
+	if (location.pathname === '/') {
+		return <Redirect to='/science' />;
+	}
+
 	const pageNum = Number(page);
-	const staringNews = pageNum * 2 - 2;
-	const endingNews = pageNum * 2;
+
+	const NEWS_PER_PAGE = 2;
+	const staringNews = pageNum * NEWS_PER_PAGE - NEWS_PER_PAGE;
+	const endingNews = pageNum * NEWS_PER_PAGE;
 
 	const filteredNews = data.filter((item) => {
-		if (type) return item.type === type;
-		else if (!type) return item;
+		let filterCondition;
+
+		if (type) {
+			filterCondition = item.type === type;
+		} else if (!type) {
+			filterCondition = item;
+		}
+
+		return filterCondition;
 	});
 
 	let slicedNews = [];
