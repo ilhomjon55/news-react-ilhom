@@ -15,15 +15,7 @@ function News({ type, page }) {
 	const endingNews = pageNum * NEWS_PER_PAGE;
 
 	const filteredNews = data.filter((item) => {
-		let filterCondition;
-
-		if (type) {
-			filterCondition = item.type === type;
-		} else if (!type) {
-			filterCondition = item;
-		}
-
-		return filterCondition;
+		return item.type === type;
 	});
 
 	let slicedNews = [];
